@@ -1,0 +1,13 @@
+:root {
+  /* fonts */
+  --main-text-color: #000;
+  --footer-text-color: #fff;
+  --accent-text-color: green;
+
+  /* background */
+  --main-bg-color: #fff;
+  --footer-bg-color: #000;
+  --header-bg-color: #fff;
+  --popup-bg-color: rgba(0, 0, 0, 0.3);
+  scroll-behavior: smooth;
+}
