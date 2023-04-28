@@ -1,0 +1,56 @@
+.header {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+}
+
+.header__container {
+  width: 1090px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.header__me {
+  display: flex;
+  gap: 5px;
+}
+
+.header__photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: solid 1px rgb(181, 174, 174);
+  cursor: pointer;
+  background-image: url('../../images/frontederPhoto.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header__links {
+  display: flex;
+  gap: 30px;
+}
+
+.header__lang-toggle {
+  display: flex;
+  gap: 5px;
+}
+
+.header__btn {
+  height: 25px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  .header__container {
+    width: 100%;
+  }
+}
