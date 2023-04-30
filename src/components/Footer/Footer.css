@@ -1,0 +1,94 @@
+.footer {
+  background-color: var(--footer-bg-color);
+  color: white;
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__container {
+  width: 1090px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.footer__main {
+  display: flex;
+  gap: 70px;
+  justify-content: space-between;
+}
+
+.footer__invitation {
+  color: green;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  align-self: center;
+  font-family: 'Dancing';
+  font-size: 37px;
+}
+
+.footer__contacts {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  margin: 20px 0;
+}
+
+.footer__copyright {
+  color: grey;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.footer__contact-item {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--footer-text-color);
+  border: 1px solid var(--footer-text-color);
+  padding: 7px 15px;
+  text-decoration: none;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.footer__contact-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.footer__contact-icon_telegram {
+  background-image: url(../../images/icons/telegram.svg);
+}
+
+.footer__contact-icon_github {
+  background-image: url(../../images/icons/github.svg);
+}
+
+.footer__contact-icon_email {
+  background-image: url(../../images/icons/email.svg);
+}
+
+.footer__contact-text {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+@media screen and (max-width: 700px) {
+  .footer__contacts {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer__contact-item {
+    text-decoration: underline;
+  }
+}
