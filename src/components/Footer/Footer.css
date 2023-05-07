@@ -1,6 +1,6 @@
 .footer {
   background-color: var(--footer-bg-color);
-  color: white;
+  color: var(--footer-text-color);
   flex-grow: 0;
   flex-shrink: 0;
   display: flex;
@@ -15,17 +15,16 @@
 
 .footer__main {
   display: flex;
-  gap: 70px;
+  flex-direction: row;
   justify-content: space-between;
 }
 
 .footer__invitation {
-  color: green;
   margin-block-start: 0;
   margin-block-end: 0;
   align-self: center;
-  font-family: 'Dancing';
-  font-size: 37px;
+  font-size: 26px;
+  color: var(--accent-milk-color);
 }
 
 .footer__contacts {
@@ -40,7 +39,7 @@
 }
 
 .footer__copyright {
-  color: grey;
+  color: var(--footer-copyright-color);
   margin-block-start: 0;
   margin-block-end: 0;
 }
@@ -50,8 +49,8 @@
   margin-block-end: 0;
   font-size: 14px;
   cursor: pointer;
-  color: var(--footer-text-color);
-  border: 1px solid var(--footer-text-color);
+  color: var(accent-milk-color);
+  border: 1px solid var(--accent-milk-color);
   padding: 7px 15px;
   text-decoration: none;
   display: flex;
@@ -77,18 +76,39 @@
   background-image: url(../../images/icons/email.svg);
 }
 
-.footer__contact-text {
-  margin-block-start: 0;
-  margin-block-end: 0;
+@media screen and (max-width: 1090px) {
+  .footer__container {
+    width: 100%;
+  }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 640px) {
   .footer__contacts {
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .footer__main {
     flex-direction: column;
-    gap: 10px;
+  }
+
+  .footer__contacts {
+    align-self: center;
+  }
+
+  .footer__copyright {
+    border-top: 1px solid var(--footer-copyright-color);
+    padding: 10px 10px 0 10px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .footer__invitation {
+    font-size: 20px;
   }
 
   .footer__contact-item {
-    text-decoration: underline;
+    border: 1px solid rgba(255, 255, 255, 0.6);
   }
 }

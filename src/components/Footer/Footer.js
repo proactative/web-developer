@@ -1,12 +1,16 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
+
 import './Footer.css'
 
 function Footer() {
+  const { t } = useTranslation()
+
   return (
     <footer className="footer">
       <div className="footer__container">
         <div className="footer__main">
-          <p className="footer__invitation">Feel free to write to me</p>
+          <p className="footer__invitation">{t('footer_invitation')}</p>
           <ul className="footer__contacts">
             <li>
               <a
@@ -16,7 +20,6 @@ function Footer() {
                 className="footer__contact-item"
               >
                 <span className="footer__contact-icon footer__contact-icon_email" />
-                <p className="footer__contact-text">email@gmail.com</p>
               </a>
             </li>
             <li>
@@ -27,7 +30,6 @@ function Footer() {
                 className="footer__contact-item"
               >
                 <span className="footer__contact-icon footer__contact-icon_github" />
-                <p className="footer__contact-text">github</p>
               </a>
             </li>
             <li>
@@ -38,12 +40,11 @@ function Footer() {
                 className="footer__contact-item"
               >
                 <span className="footer__contact-icon footer__contact-icon_telegram" />
-                <p className="footer__contact-text">@proactative</p>
               </a>
             </li>
           </ul>
         </div>
-        <p className="footer__copyright">&copy;Tatiana Parfeniuk 2023</p>
+        <p className="footer__copyright">&copy;{t('footer_copyrights')}</p>
       </div>
     </footer>
   )
