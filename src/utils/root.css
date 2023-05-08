@@ -1,13 +1,15 @@
 :root {
-  /* fonts */
-  --main-text-color: #000;
-  --footer-text-color: #fff;
-  --accent-text-color: green;
+  /* texts */
+  --main-text-color: #3d3d3d;;
+  --accent-milk-color: #fffaf4;
+  --accent-purple-color: #d837e8;
+  --footer-copyright-color: grey;
 
   /* background */
   --main-bg-color: #fff;
-  --footer-bg-color: #000;
-  --header-bg-color: #fff;
-  --popup-bg-color: rgba(0, 0, 0, 0.3);
+  --footer-bg-color: #3d3d3d;
+  --gradient: linear-gradient(90deg, #00c2ff, #9c83c5, #d837e8);
+
+  /* extra */
   scroll-behavior: smooth;
 }
