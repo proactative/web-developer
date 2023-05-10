@@ -1,0 +1,301 @@
+.skills {
+  background-color: var(--main-bg-color);
+  display: flex;
+  justify-content: center;
+}
+
+.skills__container {
+  width: 1090px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+/* tag */
+
+.skills__decor-span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, white, white, var(--accent-purple-color));
+  margin-right: 10px;
+  visibility: hidden;
+}
+
+.skills__tag {
+  display: flex;
+  justify-content: end;
+}
+
+.skills__tag-text {
+  background: var(--accent-purple-color);
+  width: 40px;
+  height: 70px;
+  writing-mode: vertical-rl; 
+  text-align: center;
+  padding: 5px 5px 5px 0;
+  border-bottom-left-radius: 20px;
+  color: var(--accent-milk-color);
+}
+
+/* title and subtitle */
+
+.skills__title {
+  text-align: center;
+  font-size: 40px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;  
+  margin-bottom: 20px;
+}
+
+.skills__subtitle {
+  margin-block-start: 0em;
+  margin-block-end: 0em;  
+  margin-top: 70px;
+  font-size: 24px;
+  align-self: end;
+  border-bottom: 1 solid grey;
+  margin-right: 14px;
+  text-align: end;
+}
+
+/* stack-table */
+.skills__stack {
+ width: 100%;
+ height: 500px;
+ background: url('../../images/introBackground.png');
+ background-position: center;
+ display: flex;
+ justify-content: center;
+}
+
+.skills__stack-list {
+  list-style: none;
+  width: 400px;
+  height: 100%;
+  background: var(--gradient);
+  list-style: none;
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  padding: 40px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-items: center;
+}
+
+.skills__stack-item {
+  width: 100px;
+  height: 40px;
+  background-color: var(--accent-milk-color);
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* accordion */
+
+.skills__accordion {
+  margin: 50px 0  20px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.skills__accordion-label {
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.4 linear;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--accent-milk-color);
+  padding: 20px;
+  box-sizing: border-box;
+  background: var(--gradient); 
+  transition: all 0.4s linear;
+  border-radius: 7px;
+}
+
+
+.skills__accordion-label:hover {
+  opacity: 0.6;
+}
+
+.skills__sign {
+  writing-mode: vertical-rl; 
+  font-size: 24px;
+}
+
+.skills__accordion-content {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  transition: all 0.4s linear;
+  opacity: 0;
+  height: 0;
+  display: flex;
+}
+
+.skills__accordion-content_opened {
+  opacity: 1;
+  height: 350px;
+  margin-bottom: 70px;
+}
+
+.skills__diploma-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  width: 100%;
+  gap: 5px;
+  
+}
+
+.skills__diploma-item {
+ height: 100%;
+ width: 256px;
+ display: inline-block;
+ background-size: contain;
+ background-repeat: no-repeat;
+ background-position: center;
+}
+
+.ru {
+  background-image: url('../../images/diplomas/ruYandex.png');
+}
+
+.en {
+  background-image: url('../../images/diplomas/enYandex.png');
+ 
+}
+
+.contest {
+  background-image: url('../../images/diplomas/contest.png');
+}
+
+@media screen and (max-width: 1090px) {
+  .skills__container {
+   width: 100%
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .skills__stack-list {
+   width: 300px;
+  }
+
+  .skills__title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .skills__stack-list {
+   width: 230px;
+   justify-items: start;
+   padding: 8px;
+   column-gap: 10px;
+  }
+
+  .skills__stack {
+    height: 380px;
+  }
+
+  .skills__title {
+    font-size: 30px;
+  }
+
+  .skills__diploma-list {
+    flex-direction: column;
+  }
+
+  .skills__accordion-content_opened {
+    height: 700px;
+  }
+
+  .skills__diploma-list {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contest {
+    margin-left: 50%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .skills__diploma-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+  }
+
+  .skills__accordion-content_opened {
+    height: 1010px;
+  }
+
+  .skills__diploma-item {
+    width: 280px;
+
+  }
+
+  .contest {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .skills__decor-span {
+    visibility: visible;
+  }
+
+  .skills__tag-text {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  .skills__subtitle {
+    text-align: end;
+    align-self: end;
+    margin-right: 0;
+    font-size: 22px;
+    width: 380px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .skills__decor-span {
+    visibility: visible;
+  }
+
+  .skills__subtitle {
+    font-size: 18px;
+    width: 280px;
+  }
+
+  .skills__tag {
+    margin-bottom: 20px;
+  }
+}

@@ -3,9 +3,6 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import './Skills.css'
-// import practicumRU from '../../../public/assets/img/certificates/'
-// import practicumEN from '../../images/certificates/YandexEN.pdf'
-// import contest from '../../images/certificates/contest.pdf'
 
 function Skills() {
   const { t } = useTranslation();
@@ -19,12 +16,13 @@ function Skills() {
     <section className="skills">
       <div className="skills__container">
 
-        <p className="skills__subtitle">Frontend is not just a job, its a craft</p>
+        <p className="skills__subtitle">{t('skills_qoute')}</p>
+        <span className="skills__decor-span" />
         <div className="skills__tag">
-          <p className="skills__tag-text">My skills</p>
+          <p className="skills__tag-text">{t('skills_tag')}</p>
         </div>
 
-        <h2 className="skills__title">My stack</h2>
+        <h2 className="skills__title">{t('skills_title')}</h2>
 
         <div className="skills__stack">
             <ul className="skills__stack-list">
@@ -57,26 +55,20 @@ function Skills() {
             
         <div className="skills__accordion">
           <div className="skills__accordion-label" onClick={handleShowContent}>
-            <p>{t("diplomas")}</p>
-              <span>X</span>
+            <p>{t('skills_accordion_label')}</p>
+              <span className="skills__sign">{!contentShown ?  '>' : '<'}</span>
             </div>
             <div
               className={
                 contentShown
-                  ? 'skills__accordion-content'
-                  : 'skills__accordion-content skills__accordion-content_opened'
+                  ? 'skills__accordion-content  skills__accordion-content_opened'
+                  : 'skills__accordion-content'
               }
             >
               <ul className="skills__diploma-list">
-                <li className="skills__diploma-item ru">
-                  {/* <img src={practicumRU} alt="diploma" /> */}
-                </li>
-                <li className="skills__diploma-item en">
-                  {/* <img src={practicumEN} alt="diploma" /> */}
-                </li>
-                <li className="skills__diploma-item contest">
-                  {/* <img src={contest} alt="diploma" /> */}
-                </li>
+                <li className="skills__diploma-item ru" />
+                <li className="skills__diploma-item en" />
+                <li className="skills__diploma-item contest" />
               </ul>
             </div>
         </div>
