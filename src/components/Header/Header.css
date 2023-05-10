@@ -3,22 +3,23 @@
   display: flex;
   justify-content: center;
   position: fixed;
-  width: 100%;
-  z-index: 1;
+  z-index: 3;
   background: var(--gradient);
+  width: 100vw;
 }
 
 .header__container {
   width: 1090px;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding:  0 10px 10px;
   box-sizing: border-box;
 }
 
 .header__me {
   display: flex;
   gap: 5px;
+  visibility: hidden;
 }
 
 .header__photo {
@@ -28,49 +29,42 @@
   border: solid 1px rgb(181, 174, 174);
   cursor: pointer;
   background-color: white;
-  background-image: url('../../images/frontederPhoto.jpg');
+  background-image: url('../../images/developerPhoto.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
 }
 
-.header__links {
-  display: flex;
-  gap: 30px;
-}
-
-.header__link {
-  font-size: 16px;
-}
-
-.header__link:hover {
-  text-decoration: underline;
-
-}
-
 .header__lang-toggle {
   display: flex;
-  gap: 5px;
+  gap: 15px;
 }
 
 .header__btn {
-  height: 35px;
+  /* height: 35px; */
+  height: 100%;
   align-self: flex-end;
   cursor: pointer;
   background-color: transparent;
   border: none;
   padding: 10px;
   text-align: center;
+  border: 1px solid transparent;
 }
 
 .header__btn:hover {
-  opacity: 0.3;
+  opacity: 0.7;
+  border: 1px solid var(--accent-milk-color);
+  border-bottom-left-radius: 20px;
+  border-top: 1px solid transparent;
+
 }
 
 .active {
-background-color: white;
-border-radius: 50%;
+  background-color: var(--accent-milk-color);
+  border-bottom-left-radius: 20px;
+  border-top: 1px solid var(--accent-milk-color) ;
 }
 
 @media screen and (max-width: 1090px) {
@@ -81,6 +75,6 @@ border-radius: 50%;
 
 @media screen and (max-width: 400px) {
   .header__title {
-    font-size: 20px;
+    font-size: 18px;
   }
 }

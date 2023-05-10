@@ -5,16 +5,18 @@ import i18next from 'i18next';
 import './App.css'
 import Header from '../Header/Header'
 import Intro from '../Intro/Intro'
+import AboutMe from '../AboutMe/AboutMe';
 import Skills from '../Skills/Skills'
 import Portfolio from '../Portfolio/Portfolio'
 import Footer from '../Footer/Footer'
 
 
 function App() {
-  const [hiddenSectionsSeen, setHiddenSectionsSeen] = useState(false)
+  const[started, setStarted] = useState(false);
+  const[activeRU, setActiveRU] = useState(false);
 
- const showHiddenSections = () => {
-    setHiddenSectionsSeen(true)
+  const getStarted = () => {
+    setStarted(true);
   }
 
   /* translation functionality */
@@ -25,28 +27,25 @@ function App() {
   const setLanguageEN = () => {
     sessionStorage.setItem('i18nextLng', 'en')
     i18next.changeLanguage("en");
+    setActiveRU(false)
   }
 
   const setLanguageRU = () => {
     sessionStorage.setItem('i18nextLng', 'ru')
     i18next.changeLanguage("ru");
+    setActiveRU(true);
   }
 
   return (
-    <div className="app">
-      <Header setLanguageEN={setLanguageEN} setLanguageRU={setLanguageRU} />
+    <div className={!started ? "app app_shorted" : "app"}>
+      <Header setLanguageEN={setLanguageEN} setLanguageRU={setLanguageRU} activeRU={activeRU} />
       <main className="app__main">
-        <Intro showHiddenSections={showHiddenSections} />
-        <div
-          className={
-            hiddenSectionsSeen ? 'app__more' : 'app__more app__more_hidden'
-          }
-        >
-          <Skills />
-          <Portfolio />
-        </div>
+        <Intro  getStarted={getStarted} /> 
+        <AboutMe />
+        <Skills />  
+        <Portfolio />
       </main>
-      <Footer />
+      <Footer />  
     </div>
   )
 }
