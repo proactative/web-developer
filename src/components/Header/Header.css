@@ -51,6 +51,7 @@
   padding: 10px;
   text-align: center;
   border: 1px solid transparent;
+  -webkit-tap-highlight-color:  transparent;
 }
 
 .header__btn:hover {
