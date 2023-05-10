@@ -1,43 +1,64 @@
-import React from 'react';
+import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Carousel } from 'react-responsive-carousel'
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 import './Slider.css'
-import image from "../../images/introBackground.png"
-import travellingImage from '../../images/slider/r_t_demo.gif'
-
+import uValery from '../../images/slider/uValery.gif'
+import aidCenter from '../../images/slider/aidCenter.gif'
+import travel from '../../images/slider/travel.gif'
+import mestoF from '../../images/slider/mestoFunctionality.gif'
+import moviesF from '../../images/slider/moviesFunctionality.gif'
+import moviesP from '../../images/slider/moviesProfile.gif'
+import moviesA from '../../images/slider/moviesAuth.gif'
 
 function Slider() {
+  const { t } = useTranslation()
+
   return (
-		<div class="slider__container">
-			<Carousel>
-				<div>
-					<img src={image} alt="smth"/>
-					<p className="legend">Welcome to my portpolio</p>
-				</div>
+    <div class="slider__container">
+      <Carousel>
+        <div>
+          <img src={mestoF} alt="my slide" />
+          <p className="legend">{t('portfolio_slide1')}</p>
+        </div>
 
-				<div>
-				    <img src={image} alt="smth"/>
-					<p className="legend">"Mesto" mini social network in two repositories (Vanilla and ReactJS)</p>
-				</div>
+        <div>
+          <img src={moviesF} alt="my slide" />
+          <p className="legend">{t('portfolio_slide2')}</p>
+        </div>
 
-				<div>
-				  <img src={image} alt="smth"/>
-					<p className="legend">"Mesto" authorization</p>
-				</div>
+        <div>
+          <img src={moviesP} alt="my slide" />
+          <p className="legend">{t('portfolio_slide3')}</p>
+        </div>
 
-				<div>
-				  <img src={travellingImage} alt="smth"/>
-					<p className="legend">"Travelling" - adaptive-responsive layout</p>
-				</div>
+        <div>
+          <img src={moviesA} alt="my slide" />
+          <p className="legend">{t('portfolio_slide4')}</p>
+        </div>
 
-				<div>
-				  <img src={image} alt="smth"/>
-					<p className="legend">visit site    https://spid.center/en/legal</p>
-				</div>
+        <div>
+          <img src={travel} alt="my slide" />
+          <p className="legend">{t('portfolio_slide5')}</p>
+        </div>
 
-			</Carousel>
-		</div>
+        <div>
+          <img src={uValery} alt="my slide" />
+          <p className="legend">{t('portfolio_slide6')}</p>
+        </div>
+
+        <div>
+          <img src={aidCenter} alt="my slide" />
+          <p className="legend">
+          {t('portfolio_slide7')}&nbsp;&nbsp;
+            <a className="slider__site-link" href="https://spid.center/en/legal" rel="noreferrer" target="_blank" >
+              https://spid.center/en/legal
+            </a>
+          </p>
+        </div>
+      </Carousel>
+    </div>
   )
 }
 
