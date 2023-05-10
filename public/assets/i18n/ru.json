@@ -1,4 +1,35 @@
 {
-    "full name":"Татьяна Парфенюк",
-    "more": "Узнать большe"
+	"full name": "Татьяна Парфенюк",
+	"more": "Далее",
+
+	"about_me_qoute": "Счастье - это заниматься любимой профессией",
+	"about_me_tag": "Профиль",
+	"about_me_title": " Обо мне",
+	"about_me_greetings": "Приветствую!",
+	"about_me_text": "Я — HTML-верстальщик и фронтэнд разработчик. Имею опыт разработки на VanillaJS и ReactJS. Участвовала в проектах, включающих:",
+	"about_me_item1": "адаптивно-отзывчивую верстку",
+	"about_me_item2": "ReactJS приложения",
+	"about_me_item3": "мини социальную сеть",
+	"name":"Татьяна",
+	"surname":"Парфенюк",
+
+	"skills_qoute": "Фронтенд — это не просто работа, это исскуство",
+	"skills_tag": "Навыки",
+	"skills_title": "Мой стэк и технологии",
+	"skills_accordion_label": "Мои сертификаты",
+
+	"portfolio_qoute": "Прелесть такой работы в том, что всегда есть что улучшить.",
+	"portfolio_tag": "Проекты",
+	"portfolio_title": "Моё портфолио",
+	"portfolio_slide1": "Проект «Mesto» — это мини социальная сеть, выполненная в двух репозиториях (VanillaJS и ReactJS)",
+	"portfolio_slide2": "Проект «Movies» — ReactJS приложение, функционал",
+	"portfolio_slide3": "Проект «Movies» — ReactJS приложение, профиль",
+	"portfolio_slide4": "Проект «Movies» — ReactJS приложение, регистрация",
+	"portfolio_slide5": "Проект «Travel» — адаптивно-отзывчивая вёрстка",
+	"portfolio_slide6": "Проект «uValery» в рамках хакатона Я.Практикума, JavaScript slider",
+	"portfolio_slide7": "перейти на\u00A0сайт",
+	"portfolio_text": "... все детали в моём гитхаб аккаунте",
+
+	"footer_copyrights": "Татьяна Парфенюк 2023",
+	"footer_invitation": "Всегда рада вашим письмам"
 }

@@ -1,4 +1,35 @@
 {
   "full name":"Tatiana Parfeniuk",
-  "more": "More details"
+  "more": "Get started",
+
+  "about_me_qoute": "One of the ways to be happy is to enjoy your profession",
+  "about_me_tag": "Profile",
+  "about_me_title": "About me",
+  "about_me_greetings": "Hello there!",
+  "about_me_text": "I am an HTML-coder and Frontend developer dealing with VanillaJS as well as ReactJS, having experince in:",
+  "about_me_item1": "adaptive-responsive layouts",
+  "about_me_item2": "ReactJS applications",
+  "about_me_item3": "mini social network",
+  "name":"Tatiana",
+	"surname":"Parfeniuk",
+
+  "skills_qoute": "Frontend is not just a job, it’s mainly a craft",
+  "skills_tag": "Skills",
+  "skills_title": "My stack and technologies",
+  "skills_accordion_label": "My certificates",
+
+  "portfolio_qoute": "The beauty of such work is that you always can do better",
+  "portfolio_tag": "Projects",
+  "portfolio_title": "My portfolio",
+  "portfolio_slide1": "Project «Mesto» is a mini social network done in two repositories (VanillaJS and ReactJS)",
+  "portfolio_slide2": "Project «Movies» is a ReactJS app, functionality demo",
+  "portfolio_slide3": "Project «Movies» is a ReactJS app, profile demo",
+  "portfolio_slide4": "Project «Movies» is a ReactJS app, authorization demo",
+  "portfolio_slide5": "Project «Travel» is a single-page adaptive-responsive layout",
+  "portfolio_slide6": "Project «uValery», participation in Yandex group contest, JavaScript slider",
+  "portfolio_slide7": "visit",
+  "portfolio_text": "... for more details visit my github account",
+
+  "footer_copyrights": "Tatiana Parfeniuk 2023",
+  "footer_invitation": "Feel free to write to me"
 }
