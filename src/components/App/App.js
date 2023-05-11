@@ -23,6 +23,7 @@ function App() {
     const language = sessionStorage?.getItem('i18nextLng')
     if (language === "ru") {
       sessionStorage.setItem('i18nextLng', 'ru')
+      setActiveRU(true);
     } else {
       sessionStorage.setItem('i18nextLng', 'en') 
     }

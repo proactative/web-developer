@@ -4,8 +4,7 @@ import './Header.css'
 
 function Header(props) {
   const { t } = useTranslation();
-  const language = sessionStorage?.getItem('i18nextLng')
-
+  
   return (
     <header className="header">
       <div className="header__container">
@@ -15,10 +14,10 @@ function Header(props) {
         </div>
 
         <div className="header__lang-toggle">
-          <button className={language==="ru" ? "header__btn" : "header__btn active"} type="button" onClick={props.setLanguageEN}>
+          <button className={props.activeRU ? "header__btn" : "header__btn active"} type="button" onClick={props.setLanguageEN}>
             En
           </button>
-          <button className={language==="en" ? "header__btn" : "header__btn active"} type="button" onClick={props.setLanguageRU}>
+          <button className={!props.activeRU ? "header__btn" : "header__btn active"} type="button" onClick={props.setLanguageRU}>
             Ru
           </button>
         </div>
