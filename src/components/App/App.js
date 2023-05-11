@@ -10,7 +10,6 @@ import Skills from '../Skills/Skills'
 import Portfolio from '../Portfolio/Portfolio'
 import Footer from '../Footer/Footer'
 
-
 function App() {
   const[started, setStarted] = useState(false);
   const[activeRU, setActiveRU] = useState(false);
@@ -21,7 +20,13 @@ function App() {
 
   /* translation functionality */
   useEffect(() => {
-    sessionStorage.setItem('i18nextLng', 'en')
+    const language = sessionStorage?.getItem('i18nextLng')
+    if (language === "ru") {
+      sessionStorage.setItem('i18nextLng', 'ru')
+    } else {
+      sessionStorage.setItem('i18nextLng', 'en') 
+    }
+    
   }, [])
 
   const setLanguageEN = () => {
